@@ -61,8 +61,8 @@
 				ADA8AC082329367100626376 /* AppDelegate.swift */,
 				ADA8AC0A2329367100626376 /* SceneDelegate.swift */,
 				ADA8AC1E2329370F00626376 /* Model */,
-				ADA8AC1D2329370700626376 /* Controller */,
 				ADA8AC1C232936FE00626376 /* View */,
+				ADA8AC1D2329370700626376 /* Controller */,
 				ADA8AC112329367300626376 /* Assets.xcassets */,
 				ADA8AC132329367300626376 /* LaunchScreen.storyboard */,
 				ADA8AC162329367300626376 /* Info.plist */,
@@ -313,13 +313,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = 2ZK2BA5X87;
 				INFOPLIST_FILE = ByteCoin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.appbrewery.ByteCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dmytroyantsybaiev.ByteCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,13 +331,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3ECFYJZ64T;
+				DEVELOPMENT_TEAM = 2ZK2BA5X87;
 				INFOPLIST_FILE = ByteCoin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.appbrewery.ByteCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dmytroyantsybaiev.ByteCoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
