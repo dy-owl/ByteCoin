@@ -14,10 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
 
-    let coinManager = CoinManager()
+    var coinManager = CoinManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        coinManager.delegate = self
         
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
@@ -25,6 +27,24 @@ class ViewController: UIViewController {
 
 }
 
+
+//MARK: - CoinManagerProtocol
+extension ViewController: CoinManagerProtocol {
+    
+    func didUpdatePrice(currency: String, price: Double) {
+        DispatchQueue.main.async {
+            self.bitcoinLabel.text = String(price.round(to: 2))
+            self.currencyLabel.text = currency
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+}
+
+//MARK: - UIPickerViewDelegate, UIPickerViewDataSource
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -44,4 +64,12 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         coinManager.getCoinPrice(for: selectedCurrency)
     }
     
+}
+
+//MARK: - Double
+extension Double {
+    func round(to places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return Darwin.round(self * divisor) / divisor
+    }
 }
