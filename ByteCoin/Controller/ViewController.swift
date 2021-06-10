@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
 
 //MARK: - CoinManagerProtocol
+
 extension ViewController: CoinManagerProtocol {
     
     func didUpdatePrice(currency: String, price: Double) {
@@ -44,7 +45,8 @@ extension ViewController: CoinManagerProtocol {
     
 }
 
-//MARK: - UIPickerViewDelegate, UIPickerViewDataSource
+//MARK: - UIPickerView Delegate & DataSource
+
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -66,7 +68,8 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
 }
 
-//MARK: - Double
+//MARK: - Double, round to places
+
 extension Double {
     func round(to places: Int) -> Double {
         let divisor = pow(10.0, Double(places))
